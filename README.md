@@ -29,7 +29,8 @@ Meteor.Router.page();
 This is a reactive variable which will trigger invalidations as the app changes pages. Usually, you'll just want to render the template that corresponds to the current page using the following helper that finds the template by name:
 
 ``` handlebars
-{{renderPage}}
+{{renderPage}} {{! for releases 0.6.6.3 and below }}
+{{> renderPage}} {{! for releases with Shark }}
 ```
 
 It's common to render the inside page isolated from the layout:
